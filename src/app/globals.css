@@ -670,6 +670,7 @@ a:hover { color: var(--color-primary-hover); }
   .hero-promo-grid { grid-template-areas: "text" "image1"; grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-dual-grid { grid-template-columns: 1fr; }
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .referral-4-grid { grid-template-columns: repeat(2, 1fr) !important; }
   .footer-top { grid-template-columns: 1fr 1fr; }
   .stat-strip { grid-template-columns: repeat(2, 1fr); }
 }
@@ -698,6 +699,7 @@ a:hover { color: var(--color-primary-hover); }
   .btn-text-responsive { display: none; }
   .nav-tier-actions .btn { padding: 0.45rem !important; border-radius: 8px !important; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
+  .referral-4-grid { grid-template-columns: 1fr !important; }
   .footer-top { grid-template-columns: 1fr; }
   .stat-strip { grid-template-columns: 1fr 1fr; gap: 1rem; }
   .stat-number { font-size: 1.7rem !important; }
