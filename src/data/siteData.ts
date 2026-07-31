@@ -114,6 +114,11 @@ export const PILLAR_IMAGES = {
     url: "/images/hands-unity-support.jpg",
     title: "Unity & Safe Housing Support",
     alt: "Diverse hands stacked together in unity"
+  },
+  orphanCare: {
+    url: "/images/girls-power-group.jpg",
+    title: "Orphanage & Youth Care Support",
+    alt: "Children and youth in community support program"
   }
 };
 

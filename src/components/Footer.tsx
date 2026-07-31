@@ -15,14 +15,14 @@ export default function Footer() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '1rem' }}>
               <img
                 src="/images/logo.png"
-                alt="Gabrial Foundation Logo"
+                alt="Gabriel Foundation Logo"
                 style={{ height: '52px', width: 'auto', objectFit: 'contain', background: '#FFFFFF', padding: '4px', borderRadius: '8px' }}
               />
               <h3 style={{ fontSize: '1.5rem', color: '#FFFFFF', margin: 0 }}>{FOUNDATION_META.name}</h3>
             </div>
             
             <p style={{ fontSize: '0.94rem', lineHeight: '1.7', color: '#CBD5E1' }}>
-              A 501(c)(3) nonprofit organization empowering women and girls through sisterhood mentoring, trauma counseling, and restoring safety to abuse survivors through life reset housing assistance.
+              A 501(c)(3) nonprofit organization empowering women and girls through sisterhood mentoring, trauma counseling, restoring safety to abuse survivors, and supporting orphaned children through food, shelter, and education.
             </p>
 
             <div className="footer-hotline-box">
@@ -39,9 +39,10 @@ export default function Footer() {
 
           {/* Mentoring Tracks */}
           <div className="footer-column">
-            <h4>Mentoring Programs</h4>
+            <h4>Mentoring &amp; Youth</h4>
             <ul className="footer-links">
               <li><Link href="/mentoring/trailblazers">Sisterhood Mentorship</Link></li>
+              <li><Link href="/orphanage-support" style={{ color: '#FDE047', fontWeight: 700 }}>Orphanage &amp; Children Care</Link></li>
               <li><Link href="/mentoring/turnaround">Turnaround Life Reset</Link></li>
               <li><Link href="/mentoring/higher-ground">Higher Ground Wraparound</Link></li>
               <li><Link href="/mentoring/lunch-friends">Employment Skills</Link></li>

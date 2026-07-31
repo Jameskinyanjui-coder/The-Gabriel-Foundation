@@ -177,11 +177,35 @@ export default function HomePage() {
                 </p>
                 <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Confidential Unlisted Shelter Lodging</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Relocation & New Apartment Setup</li>
-                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Job Training & Financial Independence</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Relocation &amp; New Apartment Setup</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Job Training &amp; Financial Independence</li>
                 </ul>
                 <Link href="/crisis/shelter-services" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
                   Learn About 'Reset Up' <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+
+            {/* Pillar 4: Orphanage & Children Support */}
+            <div className="pillar-card">
+              <div className="pillar-img-container">
+                <img src={PILLAR_IMAGES.orphanCare.url} alt={PILLAR_IMAGES.orphanCare.alt} />
+                <span className="gallery-badge">Pillar 4 • Youth Care</span>
+              </div>
+              <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <h3 style={{ fontSize: '1.35rem', color: 'var(--irc-dark)', marginBottom: '0.6rem' }}>
+                  4. Orphanage &amp; Children Care Support
+                </h3>
+                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: 1.65, marginBottom: '1.25rem', flex: 1 }}>
+                  Providing safe lodging, school supply kits, nutrition, clothes, and holistic emotional care for orphaned and vulnerable children in need.
+                </p>
+                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.9rem', color: 'var(--color-text-main)' }}>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Educational Scholarships &amp; Books</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Daily Meal Kits &amp; Pediatric Care</li>
+                  <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Safe Orphanage Shelter Upgrades</li>
+                </ul>
+                <Link href="/orphanage-support" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
+                  Orphanage Care Details <ArrowRight size={16} />
                 </Link>
               </div>
             </div>

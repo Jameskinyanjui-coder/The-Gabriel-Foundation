@@ -28,7 +28,7 @@ export default function Navbar() {
             <Link href="/" className="nav-brand" aria-label="The Gabriel Foundation Home" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
               <img
                 src="/images/logo.png"
-                alt="Gabrial Foundation Logo"
+                alt="Gabriel Foundation Logo"
                 style={{ height: '48px', width: 'auto', objectFit: 'contain' }}
               />
               <div className="nav-brand-text">
@@ -105,6 +105,7 @@ export default function Navbar() {
                   { href: '/about', label: 'About' },
                   { href: '/mentoring', label: 'Mentoring' },
                   { href: '/crisis', label: 'Emergency Support', accent: true },
+                  { href: '/orphanage-support', label: 'Orphanage Support' },
                   { href: '/get-involved', label: 'Get Involved' },
                   { href: '/resources', label: 'Resources' },
                   { href: '/contact', label: 'Contact' },
@@ -182,6 +183,7 @@ export default function Navbar() {
                 <li><Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link></li>
                 <li><Link href="/mentoring" onClick={() => setMobileOpen(false)} style={{ color: 'var(--irc-orange)' }}>Mentoring Programs</Link></li>
                 <li><Link href="/crisis" onClick={() => setMobileOpen(false)} style={{ color: 'var(--fa-green)' }}>Emergency Support &amp; Reset</Link></li>
+                <li><Link href="/orphanage-support" onClick={() => setMobileOpen(false)}>Orphanage Support</Link></li>
                 <li><Link href="/get-involved" onClick={() => setMobileOpen(false)}>Get Involved</Link></li>
                 <li><Link href="/resources" onClick={() => setMobileOpen(false)}>Community Resources</Link></li>
                 <li><Link href="/donate" onClick={() => setMobileOpen(false)} style={{ color: 'var(--hrc-yellow-dark)', fontWeight: 900 }}>Donate Now</Link></li>

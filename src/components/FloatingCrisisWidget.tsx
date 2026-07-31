@@ -40,11 +40,11 @@ export default function FloatingCrisisWidget() {
       </div>
 
       <a
-        href={`tel:${FOUNDATION_META.crisisLine247}`}
+        href="tel:18007997233"
         className="floating-call-btn"
       >
         <PhoneCall size={16} />
-        <span>{FOUNDATION_META.crisisLine247}</span>
+        <span>1-800-799-7233 (National Crisis Lifeline)</span>
       </a>
 
       <button
