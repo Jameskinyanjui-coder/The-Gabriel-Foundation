@@ -6,6 +6,7 @@ import FloatingCrisisWidget from '@/components/FloatingCrisisWidget';
 import { FOUNDATION_META } from '@/data/siteData';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://gabriel-foundation.vercel.app'),
   title: `${FOUNDATION_META.name} | Women's Empowerment, Counseling & Life Reset`,
   description: "The Gabriel Foundation is a 501(c)(3) non-profit organization dedicated to protecting women and girls from violence and all forms of abuse through 1-on-1 sisterhood mentorship, confidential trauma counseling, and emergency life reset housing assistance.",
   keywords: ["women empowerment North Texas", "ending violence against women", "domestic abuse counseling", "life reset housing", "Gabriel Foundation", "women mentorship circle"],
