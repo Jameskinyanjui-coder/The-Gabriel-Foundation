@@ -688,14 +688,9 @@ a:hover { color: var(--color-primary-hover); }
   .hero-text-area { padding: 1rem 0; }
   .hero-image-area img { min-height: 280px !important; max-height: 340px; }
   .gallery-grid { grid-template-columns: 1fr !important; }
-  .floating-crisis-widget {
-    bottom: 16px;
-    right: 16px;
-    left: 16px;
-    max-width: none;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  .floating-crisis-widget,
+  .floating-crisis-minimized {
+    display: none !important;
   }
 }
 @media (max-width: 480px) {
