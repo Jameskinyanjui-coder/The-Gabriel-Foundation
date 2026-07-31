@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             
             <p style={{ fontSize: '0.94rem', lineHeight: '1.7', color: '#CBD5E1' }}>
-              A 501(c)(3) nonprofit organization empowering North Texas youth through mentoring and restoring safety to domestic violence survivors through confidential emergency shelter and counseling.
+              A 501(c)(3) nonprofit organization empowering women and girls through sisterhood mentoring, trauma counseling, and restoring safety to abuse survivors through life reset housing assistance.
             </p>
 
             <div className="footer-hotline-box">
@@ -41,10 +41,10 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Mentoring Programs</h4>
             <ul className="footer-links">
-              <li><Link href="/mentoring/trailblazers">Trailblazers Youth</Link></li>
-              <li><Link href="/mentoring/turnaround">Turnaround Life Prep</Link></li>
+              <li><Link href="/mentoring/trailblazers">Sisterhood Mentorship</Link></li>
+              <li><Link href="/mentoring/turnaround">Turnaround Life Reset</Link></li>
               <li><Link href="/mentoring/higher-ground">Higher Ground Wraparound</Link></li>
-              <li><Link href="/mentoring/lunch-friends">Lunch Friends Employment</Link></li>
+              <li><Link href="/mentoring/lunch-friends">Employment Skills</Link></li>
               <li><Link href="/mentoring/success-stories">Success Stories</Link></li>
               <li><Link href="/mentoring/faqs">Mentees &amp; Family FAQs</Link></li>
             </ul>

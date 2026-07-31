@@ -4,9 +4,9 @@ import { Building, GraduationCap, ShieldCheck, HeartHandshake, Scale } from 'luc
 export default function PartnersPage() {
   const partnerCategories = [
     {
-      title: "School Districts & Youth Centers",
+      title: "Women's Advocacy & Support Networks",
       icon: GraduationCap,
-      description: "Partnering with Farmers Branch and North Texas Independent School Districts to identify at-risk middle and high school youth for our Trailblazers mentoring program."
+      description: "Partnering with North Texas community centers, women's shelters, and advocacy groups to connect women with our Sisterhood Mentorship Circle."
     },
     {
       title: "State Domestic Violence Coalitions",

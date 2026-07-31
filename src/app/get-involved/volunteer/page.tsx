@@ -17,9 +17,9 @@ export default function VolunteerPage() {
         {/* 2.5.1.1 Become a Mentor */}
         <div className="card">
           <Users size={32} style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }} />
-          <h3>2.5.1.1 Become a Youth Mentor</h3>
+          <h3>2.5.1.1 Become a Female Peer Mentor</h3>
           <p style={{ fontSize: '0.95rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-            Commit to 1 to 2 hours weekly for 12 months, encouraging a youth in academics, career prep, and personal confidence.
+            Commit to 1 to 2 hours weekly or bi-weekly, encouraging a woman in personal confidence, goal setting, and emotional resilience.
           </p>
         </div>
 
@@ -39,7 +39,7 @@ export default function VolunteerPage() {
           <ShieldCheck size={26} /> 2.5.1.3 Volunteer &amp; Staff Screening Standards (SOP Section 10)
         </h2>
         <p style={{ fontSize: '0.96rem', lineHeight: '1.6', color: 'var(--color-text-main)', marginBottom: '1rem' }}>
-          To ensure safety across both youth mentoring programs and emergency shelter operations, every volunteer and staff applicant undergoes a multi-step vetting process prior to onboarding:
+          To ensure safety across both women's mentorship programs and emergency shelter operations, every volunteer and staff applicant undergoes a multi-step vetting process prior to onboarding:
         </p>
         <ul style={{ paddingLeft: '1.2rem', fontSize: '0.92rem', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--color-text-main)' }}>
           <li><strong>Background Checks (SOP 10.1):</strong> Criminal history search, national sex offender registry check, and professional reference verification.</li>

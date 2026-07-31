@@ -18,7 +18,7 @@ export default function PartnershipsPage() {
           <Building2 size={32} style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }} />
           <h3>Program Sponsorship</h3>
           <p style={{ fontSize: '0.92rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
-            Directly sponsor a Trailblazers youth mentoring cohort or fund emergency safe nights for shelter residents.
+            Directly sponsor a Sisterhood Mentorship Circle cohort or fund emergency life reset lodging for recovering families.
           </p>
         </div>
 

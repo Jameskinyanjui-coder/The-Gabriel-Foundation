@@ -12,12 +12,12 @@ export default function CareersPage() {
     {
       title: "Licensed Clinical Counselor (LCSW / LPC)",
       department: "Clinical Services",
-      description: "Delivers individual counseling, facilitates support groups, and conducts clinical assessments for adult and youth clients."
+      description: "Delivers individual counseling, facilitates support groups, and conducts clinical assessments for adult clients."
     },
     {
-      title: "Youth Mentoring Coordinator",
+      title: "Women's Mentoring Coordinator",
       department: "Mentoring Division",
-      description: "Coordinates mentor-mentee matching, conducts mentor background screenings, and manages monthly youth retreat logistics."
+      description: "Coordinates mentor-mentee matching, conducts mentor background screenings, and manages monthly retreat logistics."
     }
   ];
 
@@ -27,7 +27,7 @@ export default function CareersPage() {
         <span className="badge badge-mentoring" style={{ marginBottom: '0.75rem' }}>Join Our Staff Team</span>
         <h1>2.5.2 Careers &amp; Open Positions</h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', marginTop: '0.75rem' }}>
-          Build a rewarding career empowering North Texas youth and supporting domestic violence survivors.
+          Build a rewarding career empowering women and supporting domestic violence survivors.
         </p>
       </div>
 

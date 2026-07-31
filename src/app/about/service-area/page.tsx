@@ -23,7 +23,7 @@ export default function ServiceAreaPage() {
         </div>
 
         <p style={{ fontSize: '1rem', lineHeight: '1.7' }}>
-          The Gabriel Foundation provides youth mentoring, family wraparound assistance, and domestic violence crisis counseling across Farmers Branch, Dallas, Carrollton, Irving, Lewisville, and adjacent North Texas communities.
+          The Gabriel Foundation provides women's mentorship, trauma counseling, life reset housing assistance, and crisis support across Farmers Branch, Dallas, Carrollton, Irving, Lewisville, and adjacent North Texas communities.
         </p>
 
         <div className="callout-box callout-box-crisis" style={{ marginTop: '1.5rem' }}>

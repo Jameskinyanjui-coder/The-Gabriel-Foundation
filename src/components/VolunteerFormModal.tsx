@@ -69,7 +69,7 @@ export default function VolunteerFormModal({ defaultTrack = 'mentoring' }: Volun
                   color: track === 'mentoring' ? 'white' : 'var(--color-text-main)'
                 }}
               >
-                Youth Mentor (Trailblazers / Turnaround)
+                Female Peer Mentor (Sisterhood Circle)
               </button>
               <button
                 type="button"
@@ -150,7 +150,7 @@ export default function VolunteerFormModal({ defaultTrack = 'mentoring' }: Volun
               <FileCheck size={16} /> Screening &amp; Safety Requirements (SOP Section 10.1 &amp; 10.3):
             </strong>
             <p style={{ margin: 0 }}>
-              To ensure safety for youth and shelter residents, all accepted applicants must undergo criminal background screening, reference verification, and complete 12 hours of trauma-informed orientation.
+              To ensure safety for program participants and shelter residents, all accepted applicants must undergo criminal background screening, reference verification, and complete 12 hours of trauma-informed orientation.
             </p>
           </div>
 

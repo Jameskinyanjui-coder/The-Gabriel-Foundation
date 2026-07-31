@@ -10,7 +10,7 @@ export default function DonatePage() {
         <span className="badge badge-mentoring" style={{ marginBottom: '0.75rem' }}>501(c)(3) Tax-Deductible</span>
         <h1>Support The Gabriel Foundation</h1>
         <p style={{ fontSize: '1.15rem', color: 'var(--color-text-muted)', lineHeight: '1.7', marginTop: '1rem' }}>
-          Your financial partnership empowers North Texas youth through mentoring and restores safety to domestic violence survivors fleeing emergency crisis.
+          Your financial partnership empowers women and girls through sisterhood mentorship, trauma counseling, and safe life reset lodging.
         </p>
       </div>
 

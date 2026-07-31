@@ -10,7 +10,7 @@ export default function GuidingPrinciplesPage() {
         <span className="badge badge-crisis" style={{ marginBottom: '0.75rem' }}>SOP Section 2 Standard</span>
         <h1>2.2.2 Guiding Principles</h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', marginTop: '0.75rem' }}>
-          These six core principles govern every interaction across both our youth mentoring programs and emergency domestic violence shelter.
+          These core principles govern every interaction across both our women's mentorship programs and emergency reset support services.
         </p>
       </div>
 

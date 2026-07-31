@@ -9,7 +9,7 @@ export default function TurnaroundPage() {
         <span className="badge badge-mentoring" style={{ marginBottom: '0.75rem' }}>Life Skills &amp; Career Prep</span>
         <h1>2.3.3 Turnaround Program</h1>
         <p style={{ fontSize: '1.1rem', color: 'var(--color-text-muted)', marginTop: '0.75rem' }}>
-          Equipping older youth and young adults (ages 15–24) with essential skills for independence and post-secondary success.
+          Equipping women and young adult women with essential life reset skills for personal independence and career success.
         </p>
       </div>
 

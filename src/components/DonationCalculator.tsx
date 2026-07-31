@@ -14,11 +14,11 @@ export default function DonationCalculator() {
   const presets = [25, 50, 100, 250, 500];
 
   const getImpactMessage = (amt: number) => {
-    if (amt < 35) return "Provides school supplies and emergency hygiene kits for 2 youth in our Trailblazers mentoring program.";
-    if (amt < 75) return "Funds 1 week of 1-on-1 career coaching, resume styling, and computer lab access for young adults in Turnaround.";
-    if (amt < 150) return "Sponsors 1 full clinical intake & safe emergency welcome package for a mother and child arriving at our shelter.";
-    if (amt < 300) return "Covers 1 month of group trauma counseling sessions & therapeutic play materials for resident children.";
-    return "Provides full wraparound housing transition support, food security, and emergency utility relief for a recovering family.";
+    if (amt < 35) return "Provides emergency welcome hygiene kits and essential personal items for a woman arriving at our intake facility.";
+    if (amt < 75) return "Funds 1 week of 1-on-1 sisterhood mentorship, goal-setting resources, and peer wellness check-ins.";
+    if (amt < 150) return "Sponsors 1 full clinical intake session with a licensed trauma counselor and emergency safety planning.";
+    if (amt < 300) return "Covers 1 month of confidential group therapy sessions and emotional empowerment workshops for survivors.";
+    return "Provides full 'Reset Up' housing transition support, relocation logistics, and basic household setup for a fresh start.";
   };
 
   const selectedVal = customAmount ? parseFloat(customAmount) || 0 : amount;

@@ -6,15 +6,15 @@ export default function NewsPage() {
   const articles = [
     {
       type: "2.7.1 Foundation News",
-      title: "The Gabriel Foundation Expands Trailblazers Mentoring in Farmers Branch",
+      title: "The Gabriel Foundation Expands Sisterhood Mentorship Circle in Farmers Branch",
       date: "October 14, 2025",
-      summary: "Expanding local school district partnerships to match 50 additional middle school students with dedicated adult mentors this semester."
+      summary: "Expanding community partnerships to match 50 additional women with dedicated peer mentors this semester."
     },
     {
       type: "2.7.2 Upcoming Fundraiser",
       title: "Annual Hope & Resilience Gala & Silent Auction",
       date: "November 18, 2025",
-      summary: "Join community leaders and corporate sponsors for an inspiring evening benefiting emergency shelter operations and youth scholarships."
+      summary: "Join community leaders and corporate sponsors for an inspiring evening benefiting emergency life reset operations and women's empowerment initiatives."
     },
     {
       type: "2.7.3 Awareness Campaign",
