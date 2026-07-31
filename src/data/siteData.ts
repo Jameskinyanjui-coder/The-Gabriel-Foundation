@@ -184,6 +184,26 @@ export const MENTORING_PROGRAMS: ProgramTrack[] = [
     ]
   },
   {
+    id: "trailblazers",
+    slug: "trailblazers",
+    name: "Women & Girls Mentorship Circle",
+    tagline: "Peer Guidance, Sisterhood & Confidence Building",
+    audience: "Women & Young Girls Fleeing Abuse or Seeking Empowerment",
+    description: "Our Sisterhood Mentorship Circle pairs women with compassionate, trained female mentors. Together, they work through safety goals, self-worth, emotional strength, and personal achievement.",
+    keyActivities: [
+      "Weekly 1-on-1 peer mentor meetings and wellness check-ins",
+      "Monthly sisterhood support circles and empowerment retreats",
+      "Goal setting for personal independence, education, and career growth",
+      "Emotional resilience and self-advocacy workshops"
+    ],
+    enrollmentSteps: [
+      "Confidential online intake request",
+      "Orientation and personal needs & safety assessment",
+      "Pairing with a trained, background-screened mentor",
+      "Welcome meeting and personalized mentorship roadmap"
+    ]
+  },
+  {
     id: "trauma-counseling",
     slug: "counseling",
     name: "Confidential Counseling & Therapy",
