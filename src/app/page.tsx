@@ -36,13 +36,13 @@ export default function HomePage() {
 
               {/* Action CTAs */}
               <div className="dual-cta-row" style={{ marginBottom: '2.25rem', gap: '0.85rem' }}>
-                <Link href="/crisis" className="btn btn-crisis" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem' }}>
+                <Link href="/crisis" className="btn btn-crisis" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
                   <Shield size={19} /> Get Support Now
                 </Link>
-                <Link href="/mentoring" className="btn btn-primary" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem' }}>
+                <Link href="/mentoring" className="btn btn-primary" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
                   <Users size={19} /> Mentorship & Reset Services
                 </Link>
-                <Link href="/donate" className="btn btn-donate-now" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem' }}>
+                <Link href="/donate" className="btn btn-donate-now" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
                   <Heart size={19} fill="var(--irc-dark)" /> Support Our Launch
                 </Link>
               </div>

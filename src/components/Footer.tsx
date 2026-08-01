@@ -25,14 +25,48 @@ export default function Footer() {
               A 501(c)(3) nonprofit organization empowering women and girls through sisterhood mentoring, trauma counseling, restoring safety to abuse survivors, and supporting orphaned children through food, shelter, and education.
             </p>
 
-            <div className="footer-hotline-box">
-              <div className="footer-hotline-title">
-                <ShieldAlert size={20} style={{ color: '#F43F5E' }} />
+            <div style={{
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: '8px',
+              padding: '1rem',
+              marginTop: '1.25rem',
+              maxWidth: '100%',
+              boxSizing: 'border-box',
+              overflow: 'hidden'
+            }}>
+              <div style={{
+                display: 'flex',
+                alignItems: 'flex-start',
+                gap: '0.5rem',
+                fontWeight: 700,
+                fontSize: '0.85rem',
+                color: '#FFFFFF',
+                marginBottom: '0.6rem',
+                flexWrap: 'wrap',
+                lineHeight: 1.4
+              }}>
+                <ShieldAlert size={18} style={{ color: '#F43F5E', flexShrink: 0, marginTop: '2px' }} />
                 <span>National Domestic Violence Hotline (24/7 Free &amp; Confidential)</span>
               </div>
-              <div className="footer-hotline-num">{FOUNDATION_META.nationalHotline}</div>
-              <div style={{ fontSize: '0.84rem', color: '#E2E8F0' }}>
-                Text &apos;START&apos; to 88788 &bull; TTY 1-800-787-3224 &bull; Available 24 Hours a Day
+              <a
+                href="tel:18007997233"
+                style={{
+                  display: 'block',
+                  fontSize: 'clamp(1rem, 5vw, 1.4rem)',
+                  fontWeight: 900,
+                  color: 'var(--hrc-yellow)',
+                  marginBottom: '0.5rem',
+                  wordBreak: 'break-all',
+                  overflowWrap: 'break-word',
+                  textDecoration: 'none',
+                  maxWidth: '100%'
+                }}
+              >
+                1-800-799-7233
+              </a>
+              <div style={{ fontSize: '0.82rem', color: '#E2E8F0', lineHeight: 1.5 }}>
+                Text &apos;START&apos; to 88788 &bull; TTY 1-800-787-3224
               </div>
             </div>
           </div>
