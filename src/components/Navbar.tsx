@@ -25,14 +25,14 @@ export default function Navbar() {
           <div className="container nav-tier-container">
 
             {/* Official Brand Logo */}
-            <Link href="/" className="nav-brand" aria-label="The Gabriel Foundation Home" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
+            <Link href="/" className="nav-brand" aria-label="The Gabriel Foundation Home" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none', minWidth: 0, flexShrink: 1, overflow: 'hidden' }}>
               <img
                 src="/images/logo.png"
                 alt="Gabriel Foundation Logo"
-                style={{ height: '48px', width: 'auto', objectFit: 'contain' }}
+                style={{ height: '48px', width: 'auto', objectFit: 'contain', flexShrink: 0 }}
               />
-              <div className="nav-brand-text">
-                <span className="nav-brand-title">{FOUNDATION_META.name}</span>
+              <div className="nav-brand-text" style={{ minWidth: 0, overflow: 'hidden' }}>
+                <span className="nav-brand-title" style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{FOUNDATION_META.name}</span>
               </div>
             </Link>
 
