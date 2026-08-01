@@ -112,7 +112,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
             
             {/* Pillar 1: Mentorship */}
             <div className="pillar-card">
@@ -266,7 +266,7 @@ export default function HomePage() {
       {/* ── Confidential Intake Screener & Immediate Hotline Link ── */}
       <section style={{ padding: '4.5rem 0', background: 'var(--color-bg-main)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(290px, 1fr))', gap: '2.5rem', alignItems: 'start' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem', alignItems: 'start' }}>
             
             {/* Interactive Screener */}
             <div>

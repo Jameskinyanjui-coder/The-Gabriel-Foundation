@@ -74,7 +74,7 @@ export default function DonationCalculator() {
           </div>
 
           {/* Amount Presets */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '0.65rem', marginBottom: '1.25rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem', marginBottom: '1.25rem' }}>
             {presets.map((p) => (
               <button
                 key={p}
@@ -90,7 +90,9 @@ export default function DonationCalculator() {
                   backgroundColor: amount === p && !customAmount ? 'var(--color-primary)' : 'white',
                   color: amount === p && !customAmount ? 'white' : 'var(--color-text-main)',
                   boxShadow: amount === p && !customAmount ? '0 4px 12px rgba(217, 83, 40, 0.3)' : 'none',
-                  transition: 'all var(--transition-fast)'
+                  transition: 'all var(--transition-fast)',
+                  flex: 1,
+                  minWidth: '60px'
                 }}
               >
                 ${p}

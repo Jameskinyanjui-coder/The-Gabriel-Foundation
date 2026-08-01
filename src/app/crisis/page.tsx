@@ -22,7 +22,7 @@ export default function CrisisOverviewPage() {
             </p>
           </div>
 
-          <div style={{ backgroundColor: '#111827', padding: '1.5rem', borderRadius: '12px', border: '1px solid #374151', minWidth: '300px' }}>
+          <div style={{ backgroundColor: '#111827', padding: '1.5rem', borderRadius: '12px', border: '1px solid #374151', maxWidth: '100%', boxSizing: 'border-box' }}>
             <div style={{ fontSize: '0.82rem', color: '#FCA5A5', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
               24/7 Confidential Crisis Line
             </div>
@@ -35,7 +35,7 @@ export default function CrisisOverviewPage() {
       </div>
 
       {/* Visual Photo Banner */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', background: '#FFFFFF', borderRadius: '16px', border: '1px solid var(--color-border)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', background: '#FFFFFF', borderRadius: '16px', border: '1px solid var(--color-border)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
         <div style={{ padding: '2.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', color: 'var(--irc-dark)', marginBottom: '1rem' }}>
             Women's Rights Are Human Rights

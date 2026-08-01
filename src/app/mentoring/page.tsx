@@ -20,7 +20,7 @@ export default function MentoringOverviewPage() {
       </div>
 
       {/* Hero Photo Banner */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', background: '#FFFFFF', borderRadius: '16px', border: '1px solid var(--color-border)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center', marginBottom: '4rem', background: '#FFFFFF', borderRadius: '16px', border: '1px solid var(--color-border)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
         <div style={{ padding: '2.5rem' }}>
           <h2 style={{ fontSize: '1.8rem', color: 'var(--irc-dark)', marginBottom: '1rem' }}>
             Standing Hand-in-Hand Against Violence

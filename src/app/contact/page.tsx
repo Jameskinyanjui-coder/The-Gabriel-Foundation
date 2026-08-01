@@ -41,7 +41,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <Link href="/crisis/emergency" className="btn btn-primary" style={{ backgroundColor: 'var(--color-alert-red)', whiteSpace: 'nowrap' }}>
+        <Link href="/crisis/emergency" className="btn btn-primary" style={{ backgroundColor: 'var(--color-alert-red)', wordBreak: 'break-word', maxWidth: '100%', boxSizing: 'border-box' }}>
           <PhoneCall size={18} />
           Go to Emergency Crisis Help
         </Link>

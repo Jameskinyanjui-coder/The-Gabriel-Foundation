@@ -46,7 +46,7 @@ export default function AboutPage() {
       </div>
 
       {/* Community Life Reset Banner */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center', background: '#FFFFFF', padding: '2.5rem', borderRadius: '16px', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-md)', marginBottom: '4rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', alignItems: 'center', background: '#FFFFFF', padding: '2.5rem', borderRadius: '16px', border: '1px solid var(--color-border)', boxShadow: 'var(--shadow-md)', marginBottom: '4rem' }}>
         <div style={{ height: '300px', borderRadius: '12px', overflow: 'hidden' }}>
           <img
             src="/images/women-community-support.jpg"
