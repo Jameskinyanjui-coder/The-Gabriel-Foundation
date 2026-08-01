@@ -349,11 +349,11 @@ export default function HomePage() {
           <p style={{ fontSize: '1.15rem', color: '#D1D5DB', lineHeight: 1.7, marginBottom: '2.25rem' }}>
             Join us in founding a sanctuary of hope. Your support enables 1-on-1 counseling, sisterhood mentorship, and safe life reset opportunities for women rebuilding their lives.
           </p>
-          <div style={{ display: 'flex', flexDirection: 'row', gap: '1.25rem', justifyContent: 'center', alignItems: 'center' }} className="cta-buttons-row">
-            <Link href="/donate" className="btn btn-donate-now" style={{ padding: '1rem 2rem', fontSize: '1.05rem', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.25rem', justifyContent: 'center', alignItems: 'center' }} className="cta-buttons-row">
+            <Link href="/donate" className="btn btn-donate-now" style={{ padding: '1rem 2rem', fontSize: '1.05rem', display: 'inline-flex', alignItems: 'center', gap: '8px', maxWidth: '100%', boxSizing: 'border-box' }}>
               <Heart size={20} fill="var(--irc-dark)" /> Support Our Launch
             </Link>
-            <Link href="/get-involved" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.05rem', whiteSpace: 'nowrap', display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Link href="/get-involved" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.05rem', display: 'inline-flex', alignItems: 'center', gap: '8px', maxWidth: '100%', boxSizing: 'border-box' }}>
               Become a Volunteer Mentor <Users size={20} />
             </Link>
           </div>

@@ -704,6 +704,19 @@ a:hover { color: var(--color-primary-hover); }
     white-space: normal !important;
     word-break: break-word !important;
   }
+  .cta-buttons-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+  }
+  .cta-buttons-row .btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    justify-content: center !important;
+    text-align: center !important;
+    white-space: normal !important;
+  }
   .floating-crisis-widget,
   .floating-crisis-minimized {
     display: none !important;
