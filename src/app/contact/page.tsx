@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FOUNDATION_META } from '@/data/siteData';
 import { PhoneCall, Mail, MapPin, ShieldAlert, CheckCircle2, Send, AlertTriangle, Phone } from 'lucide-react';
+import { supabase } from '@/lib/supabaseClient';
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState<boolean>(false);
@@ -14,10 +15,34 @@ export default function ContactPage() {
     inquiryType: 'General Foundation Inquiry',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const [errorMsg, setErrorMsg] = useState<string>('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setErrorMsg('');
+
+    const { error } = await supabase
+      .from('contact_messages')
+      .insert([
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          interest: formData.inquiryType,
+          message: formData.message,
+        }
+      ]);
+
+    setIsSubmitting(false);
+
+    if (error) {
+      console.error('Supabase Error:', error);
+      setErrorMsg('There was a problem sending your message. Please try again or call us directly.');
+    } else {
+      setSubmitted(true);
+    }
   };
 
   return (
@@ -65,6 +90,12 @@ export default function ContactPage() {
             </div>
           ) : (
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              {errorMsg && (
+                <div style={{ backgroundColor: '#FEE2E2', color: '#991B1B', padding: '0.75rem', borderRadius: 'var(--radius-md)', fontSize: '0.9rem' }}>
+                  {errorMsg}
+                </div>
+              )}
+              
               <div>
                 <label style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.25rem' }}>Your Name *</label>
                 <input
@@ -116,8 +147,8 @@ export default function ContactPage() {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.85rem' }}>
-                <Send size={16} /> Submit Message
+              <button type="submit" className="btn btn-primary" style={{ width: '100%', padding: '0.85rem' }} disabled={isSubmitting}>
+                <Send size={16} /> {isSubmitting ? 'Sending...' : 'Submit Message'}
               </button>
             </form>
           )}

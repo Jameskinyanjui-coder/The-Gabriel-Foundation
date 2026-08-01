@@ -2,10 +2,16 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { PhoneCall, ShieldAlert, Heart, FileText, Lock, MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
 import { FOUNDATION_META } from '@/data/siteData';
 
 export default function Footer() {
+  const pathname = usePathname();
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <footer className="footer" role="contentinfo">
       <div className="container">

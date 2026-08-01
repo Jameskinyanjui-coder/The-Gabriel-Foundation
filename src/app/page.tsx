@@ -1,17 +1,27 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { FOUNDATION_META, IMPACT_STATS, GALLERY_IMAGES, HERO_IMAGE, PILLAR_IMAGES } from '@/data/siteData';
 import {
   Users, Shield, Heart, ArrowRight,
-  CheckCircle2, ShieldCheck, HeartHandshake, Home, Handshake, ChevronDown, ChevronUp
+  CheckCircle2, ShieldCheck, HeartHandshake, Home, Handshake, ChevronDown, ChevronUp, Newspaper
 } from 'lucide-react';
 import IntakeScreener from '@/components/IntakeScreener';
 import ReferralDirectory from '@/components/ReferralDirectory';
+import { supabase } from '@/lib/supabaseClient';
 
 export default function HomePage() {
   const [showAllGallery, setShowAllGallery] = useState(false);
+  const [recentUpdates, setRecentUpdates] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function fetchRecent() {
+      const { data } = await supabase.from('site_updates').select('*').order('created_at', { ascending: false }).limit(3);
+      if (data) setRecentUpdates(data);
+    }
+    fetchRecent();
+  }, []);
 
   const displayedGallery = showAllGallery ? GALLERY_IMAGES : GALLERY_IMAGES.slice(0, 4);
 
@@ -260,6 +270,44 @@ export default function HomePage() {
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* ── Latest Updates & Insights Preview ── */}
+      <section style={{ padding: '4.5rem 0', background: '#F8FAFC' }}>
+        <div className="container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+            <div>
+              <div style={{ color: 'var(--color-primary)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
+                Foundation News
+              </div>
+              <h2 style={{ fontSize: '2.3rem', margin: 0 }}>Latest Updates &amp; Impact</h2>
+            </div>
+            <Link href="/insights" className="btn btn-outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              View All Updates <ArrowRight size={16} />
+            </Link>
+          </div>
+
+          <div className="grid-3" style={{ gap: '2rem' }}>
+            {recentUpdates.length === 0 ? (
+              <p style={{ color: 'var(--color-text-muted)' }}>No recent updates to display yet.</p>
+            ) : (
+              recentUpdates.map(update => (
+                <Link key={update.id} href="/insights" className="card" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', textDecoration: 'none', color: 'inherit', transition: 'transform 0.2s', padding: '2rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: update.content_type === 'impact' ? '#8B5CF6' : update.content_type === 'event' ? 'var(--fa-green)' : 'var(--color-primary)' }}>
+                    {update.content_type === 'impact' ? <HeartHandshake size={20} /> : update.content_type === 'event' ? <Home size={20} /> : <Newspaper size={20} />}
+                    <span style={{ fontSize: '0.85rem', fontWeight: 700, textTransform: 'uppercase' }}>
+                      {update.content_type === 'impact' ? 'Impact Story' : update.content_type === 'event' ? 'Upcoming Event' : 'Press Release'}
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: '1.25rem', margin: 0 }}>{update.title}</h3>
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', margin: 0, flex: 1, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                    {update.summary}
+                  </p>
+                </Link>
+              ))
+            )}
+          </div>
         </div>
       </section>
 

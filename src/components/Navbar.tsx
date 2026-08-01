@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Heart, Shield, Users, Menu, X, Search } from 'lucide-react';
+import { Heart, Shield, Users, Menu, X, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { FOUNDATION_META } from '@/data/siteData';
 import GlobalSearchModal from './GlobalSearchModal';
 
@@ -11,8 +11,14 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [updatesDropdownOpen, setUpdatesDropdownOpen] = useState(false);
+  const [mobileUpdatesOpen, setMobileUpdatesOpen] = useState(false);
 
   const isCrisisTrack = pathname.startsWith('/crisis');
+  
+  if (pathname.startsWith('/admin')) {
+    return null;
+  }
 
   return (
     <>
@@ -107,18 +113,44 @@ export default function Navbar() {
                   { href: '/crisis', label: 'Emergency Support', accent: true },
                   { href: '/orphanage-support', label: 'Orphanage Support' },
                   { href: '/get-involved', label: 'Get Involved' },
+                  { isDropdown: true, label: 'Updates', sublinks: [
+                    { href: '/news', label: 'News & Press' },
+                    { href: '/blog', label: 'Blog & Stories' },
+                    { href: '/events', label: 'Upcoming Events' },
+                    { href: '/insights', label: 'Data & Insights' },
+                  ]},
                   { href: '/resources', label: 'Resources' },
                   { href: '/contact', label: 'Contact' },
-                ].map(({ href, label, accent }) => {
-                  const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href);
+                ].map((item: any, idx) => {
+                  if (item.isDropdown) {
+                    const isActive = ['/news', '/blog', '/events', '/insights'].some(path => pathname.startsWith(path));
+                    return (
+                      <li key={idx} onMouseEnter={() => setUpdatesDropdownOpen(true)} onMouseLeave={() => setUpdatesDropdownOpen(false)} style={{ position: 'relative' }}>
+                        <button className={`nav-link ${isActive ? 'active' : ''}`} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontFamily: 'inherit', fontSize: 'inherit', padding: '1rem 0' }}>
+                          {item.label} <ChevronDown size={14} />
+                        </button>
+                        {updatesDropdownOpen && (
+                          <div style={{ position: 'absolute', top: '100%', left: 0, background: '#fff', border: '1px solid var(--color-border)', borderRadius: '8px', boxShadow: 'var(--shadow-md)', minWidth: '200px', zIndex: 50, padding: '0.5rem 0', display: 'flex', flexDirection: 'column' }}>
+                            {item.sublinks.map((sub: any) => (
+                              <Link key={sub.href} href={sub.href} onClick={() => setUpdatesDropdownOpen(false)} style={{ padding: '0.75rem 1.25rem', color: 'var(--color-text-main)', textDecoration: 'none', fontSize: '0.9rem', display: 'block', fontWeight: pathname.startsWith(sub.href) ? 700 : 500 }}>
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </li>
+                    );
+                  }
+
+                  const isActive = item.href === '/' ? pathname === '/' : pathname.startsWith(item.href);
                   return (
-                    <li key={href}>
+                    <li key={item.href}>
                       <Link
-                        href={href}
+                        href={item.href}
                         className={`nav-link ${isActive ? 'active' : ''}`}
-                        style={accent ? { color: 'var(--fa-green)', fontWeight: 900 } : undefined}
+                        style={item.accent ? { color: 'var(--fa-green)', fontWeight: 900 } : undefined}
                       >
-                        {label}
+                        {item.label}
                       </Link>
                     </li>
                   );
@@ -185,6 +217,19 @@ export default function Navbar() {
                 <li><Link href="/crisis" onClick={() => setMobileOpen(false)} style={{ color: 'var(--fa-green)' }}>Emergency Support &amp; Reset</Link></li>
                 <li><Link href="/orphanage-support" onClick={() => setMobileOpen(false)}>Orphanage Support</Link></li>
                 <li><Link href="/get-involved" onClick={() => setMobileOpen(false)}>Get Involved</Link></li>
+                <li>
+                  <button onClick={() => setMobileUpdatesOpen(!mobileUpdatesOpen)} style={{ background: 'none', border: 'none', width: '100%', textAlign: 'left', padding: '1rem 0', fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-main)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    Updates {mobileUpdatesOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                  </button>
+                  {mobileUpdatesOpen && (
+                    <ul style={{ listStyle: 'none', padding: '0 0 1rem 1rem', margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      <li><Link href="/news" onClick={() => setMobileOpen(false)} style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)' }}>News &amp; Press</Link></li>
+                      <li><Link href="/blog" onClick={() => setMobileOpen(false)} style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)' }}>Blog &amp; Stories</Link></li>
+                      <li><Link href="/events" onClick={() => setMobileOpen(false)} style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)' }}>Upcoming Events</Link></li>
+                      <li><Link href="/insights" onClick={() => setMobileOpen(false)} style={{ fontSize: '1.05rem', color: 'var(--color-text-muted)' }}>Data &amp; Insights</Link></li>
+                    </ul>
+                  )}
+                </li>
                 <li><Link href="/resources" onClick={() => setMobileOpen(false)}>Community Resources</Link></li>
                 <li><Link href="/donate" onClick={() => setMobileOpen(false)} style={{ color: 'var(--hrc-yellow-dark)', fontWeight: 900 }}>Donate Now</Link></li>
                 <li><Link href="/contact" onClick={() => setMobileOpen(false)}>Contact</Link></li>
