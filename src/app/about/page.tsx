@@ -30,7 +30,7 @@ export default function AboutPage() {
             <Link href="/crisis" className="btn btn-crisis">
               <Shield size={18} /> Emergency Crisis Line
             </Link>
-            <Link href="/mentoring" className="btn btn-primary">
+            <Link href="/pillars/sisterhood" className="btn btn-primary">
               <Users size={18} /> Mentorship & Reset Services
             </Link>
           </div>

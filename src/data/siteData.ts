@@ -402,7 +402,7 @@ export const FINANCIALS: FinancialMetric = {
 
 export const IMPACT_STATS = [
   { label: "Newly Founded NGO", value: "2026 Launch", icon: "Sparkles" },
-  { label: "Core Lifelines of Support", value: "3 Pillars", icon: "Shield" },
+  { label: "Core Lifelines of Support", value: "4 Pillars", icon: "Shield" },
   { label: "Commitment to Survivor Safety", value: "100%", icon: "Heart" },
   { label: "Community & Volunteer Driven", value: "Open Intake", icon: "Users" }
 ];

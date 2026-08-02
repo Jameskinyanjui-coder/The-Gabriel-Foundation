@@ -22,7 +22,7 @@ export default function MentoringMatchQuiz() {
     if (needsHousing) {
       return {
         program: PROGRAM_DIVISIONS.lifeReset,
-        url: '/crisis/shelter-services',
+        url: '/pillars/fresh-start',
         badge: 'Life Reset & Safe Housing Track',
         icon: Home,
         reason: 'Recommended because you indicated safe shelter, emergency relocation, or restarting your life in safety is your immediate focus.',
@@ -31,7 +31,7 @@ export default function MentoringMatchQuiz() {
     if (primaryGoal === 'counseling') {
       return {
         program: PROGRAM_DIVISIONS.counseling,
-        url: '/crisis/counseling',
+        url: '/pillars/recovery',
         badge: 'Trauma Therapy & Counseling Track',
         icon: HeartHandshake,
         reason: 'Recommended for women seeking 1-on-1 confidential counseling, mental health therapy, and trauma processing support.',
@@ -48,7 +48,7 @@ export default function MentoringMatchQuiz() {
     }
     return {
       program: PROGRAM_DIVISIONS.mentorship,
-      url: '/mentoring',
+      url: '/pillars/sisterhood',
       badge: 'Sisterhood Mentorship Track',
       icon: Users,
       reason: 'Recommended for women seeking a dedicated female mentor to build confidence, establish goals, and join survivor support circles.',

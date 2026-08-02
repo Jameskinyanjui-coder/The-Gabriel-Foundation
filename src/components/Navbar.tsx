@@ -45,7 +45,7 @@ export default function Navbar() {
             {/* Desktop Track Switcher (Mentoring Division + Crisis & Reset) */}
             <div className="track-switcher" role="navigation" aria-label="Program Division Tracks">
               <Link
-                href="/mentoring"
+                href="/pillars/sisterhood"
                 className={`track-btn track-btn-mentoring ${!isCrisisTrack ? 'active' : ''}`}
               >
                 <Users size={15} />
@@ -109,9 +109,8 @@ export default function Navbar() {
                 {[
                   { href: '/', label: 'Home' },
                   { href: '/about', label: 'About' },
-                  { href: '/mentoring', label: 'Mentoring' },
-                  { href: '/crisis', label: 'Emergency Support', accent: true },
-                  { href: '/orphanage-support', label: 'Orphanage Support' },
+                  { href: '/pillars/sisterhood', label: 'Mentoring' },
+                  { href: '/pillars/youth-care', label: 'Orphanage Support' },
                   { href: '/get-involved', label: 'Get Involved' },
                   { isDropdown: true, label: 'Updates', sublinks: [
                     { href: '/news', label: 'News & Press' },
@@ -183,7 +182,7 @@ export default function Navbar() {
             {/* Quick Division Track Switcher */}
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '1.25rem' }}>
               <Link
-                href="/mentoring"
+                href="/pillars/sisterhood"
                 onClick={() => setMobileOpen(false)}
                 className="btn btn-primary"
                 style={{ padding: '0.65rem', fontSize: '0.84rem', justifyContent: 'center' }}
@@ -213,9 +212,9 @@ export default function Navbar() {
               <ul className="mobile-nav-list">
                 <li><Link href="/" onClick={() => setMobileOpen(false)}>Home</Link></li>
                 <li><Link href="/about" onClick={() => setMobileOpen(false)}>About Us</Link></li>
-                <li><Link href="/mentoring" onClick={() => setMobileOpen(false)} style={{ color: 'var(--irc-orange)' }}>Mentoring Programs</Link></li>
+                <li><Link href="/pillars/sisterhood" onClick={() => setMobileOpen(false)} style={{ color: 'var(--irc-orange)' }}>Mentoring Programs</Link></li>
                 <li><Link href="/crisis" onClick={() => setMobileOpen(false)} style={{ color: 'var(--fa-green)' }}>Emergency Support &amp; Reset</Link></li>
-                <li><Link href="/orphanage-support" onClick={() => setMobileOpen(false)}>Orphanage Support</Link></li>
+                <li><Link href="/pillars/youth-care" onClick={() => setMobileOpen(false)}>Orphanage Support</Link></li>
                 <li><Link href="/get-involved" onClick={() => setMobileOpen(false)}>Get Involved</Link></li>
                 <li>
                   <button onClick={() => setMobileUpdatesOpen(!mobileUpdatesOpen)} style={{ background: 'none', border: 'none', width: '100%', textAlign: 'left', padding: '1rem 0', fontSize: '1.2rem', fontWeight: 700, color: 'var(--color-text-main)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

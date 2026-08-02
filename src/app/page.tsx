@@ -49,7 +49,7 @@ export default function HomePage() {
                 <Link href="/crisis" className="btn btn-crisis" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
                   <Shield size={19} /> Get Support Now
                 </Link>
-                <Link href="/mentoring" className="btn btn-primary" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
+                <Link href="/pillars/sisterhood" className="btn btn-primary" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
                   <Users size={19} /> Mentorship & Reset Services
                 </Link>
                 <Link href="/donate" className="btn btn-donate-now" style={{ padding: '0.95rem 1.85rem', fontSize: '1.05rem', maxWidth: '100%', boxSizing: 'border-box', wordBreak: 'break-word' }}>
@@ -116,7 +116,7 @@ export default function HomePage() {
             <div style={{ color: 'var(--irc-orange)', fontWeight: 800, fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.5rem' }}>
               How We Help Women Escape Abuse
             </div>
-            <h2 style={{ fontSize: '2.3rem', marginBottom: '1rem' }}>Our 3 Pillars of Empowerment & Safety</h2>
+            <h2 style={{ fontSize: '2.3rem', marginBottom: '1rem' }}>Our 4 Pillars of Empowerment & Safety</h2>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '1.1rem', lineHeight: 1.7 }}>
               We walk alongside women through every step of their journey — from crisis emergency safety to 1-on-1 counseling, sisterhood mentorship, and complete life rebuilding.
             </p>
@@ -142,7 +142,7 @@ export default function HomePage() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Sisterhood Empowerment Circles</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Emotional Resilience Coaching</li>
                 </ul>
-                <Link href="/mentoring" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
+                <Link href="/pillars/sisterhood" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
                   Explore Mentorship Circle <ArrowRight size={16} />
                 </Link>
               </div>
@@ -166,7 +166,7 @@ export default function HomePage() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Weekly Confidential Support Groups</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Mother & Child Healing Sessions</li>
                 </ul>
-                <Link href="/crisis/counseling" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
+                <Link href="/pillars/recovery" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
                   Access Counseling Services <ArrowRight size={16} />
                 </Link>
               </div>
@@ -190,7 +190,7 @@ export default function HomePage() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Relocation &amp; New Apartment Setup</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Job Training &amp; Financial Independence</li>
                 </ul>
-                <Link href="/crisis/shelter-services" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
+                <Link href="/pillars/fresh-start" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
                   Learn About 'Reset Up' <ArrowRight size={16} />
                 </Link>
               </div>
@@ -214,7 +214,7 @@ export default function HomePage() {
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Daily Meal Kits &amp; Pediatric Care</li>
                   <li style={{ display: 'flex', alignItems: 'center', gap: '8px' }}><CheckCircle2 size={16} color="var(--fa-green)" /> Safe Orphanage Shelter Upgrades</li>
                 </ul>
-                <Link href="/orphanage-support" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
+                <Link href="/pillars/youth-care" className="btn btn-secondary" style={{ textAlign: 'center', justifyContent: 'center' }}>
                   Orphanage Care Details <ArrowRight size={16} />
                 </Link>
               </div>

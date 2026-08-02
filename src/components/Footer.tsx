@@ -81,13 +81,13 @@ export default function Footer() {
           <div className="footer-column">
             <h4>Mentoring &amp; Youth</h4>
             <ul className="footer-links">
-              <li><Link href="/mentoring/trailblazers">Sisterhood Mentorship</Link></li>
-              <li><Link href="/orphanage-support" style={{ color: '#FDE047', fontWeight: 700 }}>Orphanage &amp; Children Care</Link></li>
-              <li><Link href="/mentoring/turnaround">Turnaround Life Reset</Link></li>
-              <li><Link href="/mentoring/higher-ground">Higher Ground Wraparound</Link></li>
-              <li><Link href="/mentoring/lunch-friends">Employment Skills</Link></li>
-              <li><Link href="/mentoring/success-stories">Success Stories</Link></li>
-              <li><Link href="/mentoring/faqs">Mentees &amp; Family FAQs</Link></li>
+              <li><Link href="/pillars/sisterhood/trailblazers">Sisterhood Mentorship</Link></li>
+              <li><Link href="/pillars/youth-care" style={{ color: '#FDE047', fontWeight: 700 }}>Orphanage &amp; Children Care</Link></li>
+              <li><Link href="/pillars/sisterhood/turnaround">Turnaround Life Reset</Link></li>
+              <li><Link href="/pillars/sisterhood/higher-ground">Higher Ground Wraparound</Link></li>
+              <li><Link href="/pillars/sisterhood/lunch-friends">Employment Skills</Link></li>
+              <li><Link href="/pillars/sisterhood/success-stories">Success Stories</Link></li>
+              <li><Link href="/pillars/sisterhood/faqs">Mentees &amp; Family FAQs</Link></li>
             </ul>
           </div>
 
@@ -96,8 +96,8 @@ export default function Footer() {
             <h4>Crisis &amp; Shelter</h4>
             <ul className="footer-links">
               <li><Link href="/crisis/emergency" style={{ color: '#FDA4AF', fontWeight: 800 }}>Emergency Help (911)</Link></li>
-              <li><Link href="/crisis/shelter-services">Shelter &amp; Intake Protocol</Link></li>
-              <li><Link href="/crisis/counseling">Counseling &amp; Clinical</Link></li>
+              <li><Link href="/pillars/fresh-start">Shelter &amp; Intake Protocol</Link></li>
+              <li><Link href="/pillars/recovery">Counseling &amp; Clinical</Link></li>
               <li><Link href="/crisis/childrens-services">Children&apos;s Services</Link></li>
               <li><Link href="/crisis/privacy-safety">Tech &amp; Privacy Safety</Link></li>
               <li><Link href="/crisis/friends-family">For Friends &amp; Family</Link></li>

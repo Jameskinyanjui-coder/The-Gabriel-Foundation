@@ -68,6 +68,51 @@ const nextConfig = {
       },
     ];
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/mentoring/:path*',
+        destination: '/pillars/sisterhood/:path*',
+        permanent: true,
+      },
+      {
+        source: '/mentoring',
+        destination: '/pillars/sisterhood',
+        permanent: true,
+      },
+      {
+        source: '/crisis/counseling/:path*',
+        destination: '/pillars/recovery/:path*',
+        permanent: true,
+      },
+      {
+        source: '/crisis/counseling',
+        destination: '/pillars/recovery',
+        permanent: true,
+      },
+      {
+        source: '/crisis/shelter-services/:path*',
+        destination: '/pillars/fresh-start/:path*',
+        permanent: true,
+      },
+      {
+        source: '/crisis/shelter-services',
+        destination: '/pillars/fresh-start',
+        permanent: true,
+      },
+      {
+        source: '/orphanage-support/:path*',
+        destination: '/pillars/youth-care/:path*',
+        permanent: true,
+      },
+      {
+        source: '/orphanage-support',
+        destination: '/pillars/youth-care',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
