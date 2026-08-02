@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import FloatingCrisisWidget from '@/components/FloatingCrisisWidget';
 import { FOUNDATION_META } from '@/data/siteData';
 
 export const metadata: Metadata = {
@@ -42,7 +41,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <FloatingCrisisWidget />
       </body>
     </html>
   );
