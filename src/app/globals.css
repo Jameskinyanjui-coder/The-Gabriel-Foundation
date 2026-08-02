@@ -510,9 +510,9 @@ a:hover { color: var(--color-primary-hover); }
 .stat-strip-item:last-child { border-right: none; }
 .stat-number {
   font-family: var(--font-heading);
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 900;
-  line-height: 1;
+  line-height: 1.1;
   color: var(--hrc-yellow);
 }
 .stat-label {
