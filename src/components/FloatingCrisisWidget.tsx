@@ -8,6 +8,14 @@ export default function FloatingCrisisWidget() {
   const [minimized, setMinimized] = useState(false);
 
   const handleQuickExit = () => {
+    try {
+      const depth = window.history.length;
+      for (let i = 0; i < depth; i++) {
+        window.history.pushState(null, '', '/');
+      }
+    } catch {
+      // Fallback: best-effort
+    }
     window.location.replace('https://weather.com');
   };
 

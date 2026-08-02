@@ -166,7 +166,28 @@ export default function ReferralDirectory() {
               <div style={{ paddingTop: '0.85rem', borderTop: '1px solid var(--color-border)' }}>
                 <div style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--color-crisis-dark)', display: 'flex', alignItems: 'center', gap: '5px' }}>
                   <Phone size={15} style={{ flexShrink: 0 }} />
-                  <span>{item.contact}</span>
+                  <span>
+                    {item.contact.split(' / ').map((part, index, array) => {
+                      const isUrl = part.includes('www.') || part.includes('http');
+                      const content = isUrl ? (
+                        <a href={part.startsWith('http') ? part : `https://${part}`} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>
+                          {part}
+                        </a>
+                      ) : (
+                        part.match(/\d{3}/) ? (
+                          <a href={`tel:${part.replace(/[^\d]/g, '')}`} style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>
+                            {part}
+                          </a>
+                        ) : part
+                      );
+                      return (
+                        <React.Fragment key={index}>
+                          {content}
+                          {index < array.length - 1 && <span style={{ color: 'var(--color-text-muted)', margin: '0 4px' }}>/</span>}
+                        </React.Fragment>
+                      );
+                    })}
+                  </span>
                 </div>
                 <div style={{ fontSize: '0.75rem', color: '#64748B', marginTop: '4px', fontStyle: 'italic' }}>
                   {item.confidentialityNote}

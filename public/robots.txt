@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /crisis/shelter-services
+Disallow: /crisis/emergency
+
+# Prevent caching of sensitive crisis pages
+X-Robots-Tag: noarchive

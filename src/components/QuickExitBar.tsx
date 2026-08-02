@@ -4,14 +4,29 @@ import React, { useEffect } from 'react';
 import { ShieldAlert, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
 
-export default function QuickExitBar() {
-  const handleQuickExit = () => {
-    window.location.replace('https://weather.com');
-  };
+/**
+ * Performs a DV-safe quick exit:
+ * 1. Pushes a dummy state for every page in the current session history
+ *    so the back button cannot return to any page on this site.
+ * 2. Replaces the final entry with weather.com using location.replace()
+ *    so the back button from weather.com also skips this site entirely.
+ */
+function performQuickExit() {
+  try {
+    const depth = window.history.length;
+    for (let i = 0; i < depth; i++) {
+      window.history.pushState(null, '', '/');
+    }
+  } catch {
+    // Fallback: best-effort — some browsers restrict history manipulation
+  }
+  window.location.replace('https://weather.com');
+}
 
+export default function QuickExitBar() {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') handleQuickExit();
+      if (e.key === 'Escape') performQuickExit();
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
@@ -43,10 +58,10 @@ export default function QuickExitBar() {
 
         {/* Right: FA-style action button */}
         <button
-          onClick={handleQuickExit}
+          onClick={performQuickExit}
           className="quick-exit-btn"
-          title="Press ESC or click to instantly leave this site"
-          aria-label="Quick Exit — Leave Site Now"
+          title="Press ESC or click to instantly leave this site and clear browser history"
+          aria-label="Quick Exit — Leave Site Now and Clear History"
         >
           QUICK EXIT
           <ExternalLink size={13} />

@@ -1,9 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Shield, PhoneCall, CheckCircle2, ArrowRight, Lock, AlertTriangle, ChevronRight, Send, Heart } from 'lucide-react';
+import { Shield, PhoneCall, CheckCircle2, ArrowRight, Lock, AlertTriangle, ChevronRight, Send, Heart, Laptop } from 'lucide-react';
 import { FOUNDATION_META } from '@/data/siteData';
 import Link from 'next/link';
+import { supabase } from '@/lib/supabaseClient';
 
 export default function IntakeScreener() {
   const [step, setStep] = useState<number>(1);
@@ -16,9 +17,29 @@ export default function IntakeScreener() {
     notes: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setErrorMsg('');
+
+    try {
+      const { error } = await supabase.from('contact_messages').insert([{
+        name: formData.nameOrAlias,
+        email: formData.contactInfo, // using contactInfo for email/phone field
+        interest: formData.supportType,
+        message: 'Confidential Intake Request. Safe time to contact: ' + formData.safeTimeToContact + '. Notes: ' + formData.notes
+      }]);
+
+      if (error) throw error;
+      setSubmitted(true);
+    } catch (err: any) {
+      setErrorMsg(err.message || 'Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -99,6 +120,19 @@ export default function IntakeScreener() {
                 Your privacy and safety are completely protected. Alias names are welcomed.
               </p>
 
+              <div style={{ backgroundColor: '#FFFBEB', padding: '1rem', borderRadius: '8px', borderLeft: '4px solid #F59E0B', marginBottom: '1.25rem', display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
+                <Laptop size={20} style={{ color: '#D97706', flexShrink: 0, marginTop: '2px' }} />
+                <p style={{ fontSize: '0.85rem', color: '#92400E', margin: 0, lineHeight: 1.5 }}>
+                  <strong>Safety Warning:</strong> If you are using a shared device, do <strong>NOT</strong> let your browser save this form data. Consider using Private / Incognito mode.
+                </p>
+              </div>
+
+              {errorMsg && (
+                <div style={{ backgroundColor: '#FEF2F2', color: '#991B1B', padding: '0.75rem', borderRadius: '8px', fontSize: '0.85rem', marginBottom: '1.25rem', border: '1px solid #F87171' }}>
+                  {errorMsg}
+                </div>
+              )}
+
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', marginBottom: '1.25rem' }}>
                 <div>
                   <label style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--irc-dark)', display: 'block', marginBottom: '4px' }}>
@@ -107,6 +141,7 @@ export default function IntakeScreener() {
                   <input
                     type="text"
                     required
+                    autoComplete="off"
                     placeholder="e.g. Sarah M."
                     value={formData.nameOrAlias}
                     onChange={(e) => setFormData({ ...formData, nameOrAlias: e.target.value })}
@@ -121,6 +156,7 @@ export default function IntakeScreener() {
                   <input
                     type="text"
                     required
+                    autoComplete="off"
                     placeholder="Confidential Email or Phone Number"
                     value={formData.contactInfo}
                     onChange={(e) => setFormData({ ...formData, contactInfo: e.target.value })}
@@ -149,8 +185,8 @@ export default function IntakeScreener() {
                 <button type="button" onClick={() => setStep(2)} className="btn btn-outline" style={{ padding: '0.65rem 1rem' }}>
                   Back
                 </button>
-                <button type="submit" className="btn btn-primary" style={{ flex: 1, justifyContent: 'center' }}>
-                  <Send size={16} /> Send Confidential Request
+                <button type="submit" disabled={loading} className="btn btn-primary" style={{ flex: 1, justifyContent: 'center', opacity: loading ? 0.7 : 1 }}>
+                  {loading ? 'Sending...' : <><Send size={16} /> Send Confidential Request</>}
                 </button>
               </div>
             </form>
