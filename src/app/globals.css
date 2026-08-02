@@ -272,6 +272,8 @@ a:hover { color: var(--color-primary-hover); }
   background: var(--color-primary);
   border-radius: 2px;
 }
+/* Hide any accidentally empty list items */
+.nav-links li:empty { display: none; }
 
 /* ============================================================
    BUTTONS — All three sites use strong, bold CTA buttons
@@ -403,6 +405,11 @@ a:hover { color: var(--color-primary-hover); }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+/* Responsive filter/utility grid — 2-col on desktop, 1-col on mobile */
+.grid-responsive { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem; }
+@media (max-width: 768px) {
+  .grid-responsive { grid-template-columns: 1fr; }
+}
 
 /* ============================================================
    HERO — IRC Fullwidth + FA Two-CTA split pattern

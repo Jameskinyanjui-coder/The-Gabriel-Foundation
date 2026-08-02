@@ -65,7 +65,7 @@ export default function CrisisOverviewPage() {
           <AlertTriangle size={32} style={{ color: 'var(--color-alert-red)', marginBottom: '0.75rem' }} />
           <h3 style={{ color: 'var(--color-crisis-dark)', fontSize: '1.2rem', marginBottom: '0.4rem' }}>In Danger Right Now?</h3>
           <p style={{ fontSize: '0.9rem', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
-            Call 911 immediately if in physical danger. Reach our 24/7 hotline at 1-800-555-GABRIEL or text START to 88788.
+            Call 911 immediately if in physical danger. Reach the 24/7 National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788.
           </p>
         </div>
 

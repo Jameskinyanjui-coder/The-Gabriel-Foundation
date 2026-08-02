@@ -52,6 +52,8 @@ export const FOUNDATION_META = {
   nationalHotline: "1-800-799-7233 (800-799-SAFE)",
   hotlineText: "Text 'START' to 88788",
   crisisLine247: "1-800-799-7233 (National Crisis Lifeline)",
+  /** Clean numeric-only version for use in tel: href attributes */
+  crisisLineTel: "18007997233",
   adminAddress: "P.O. Box 810452, Farmers Branch, TX 75381 (Administrative & Intake Mail Only)",
   adminEmail: "help@gabrielfoundation.org",
   adminPhone: "(972) 555-0199",

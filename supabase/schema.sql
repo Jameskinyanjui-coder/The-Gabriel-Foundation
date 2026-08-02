@@ -60,3 +60,28 @@ ON CONFLICT (id) DO NOTHING;
 CREATE POLICY "Public Access" ON storage.objects FOR SELECT USING (bucket_id = 'images');
 CREATE POLICY "Admin Uploads" ON storage.objects FOR INSERT WITH CHECK (bucket_id = 'images' AND auth.role() = 'authenticated');
 CREATE POLICY "Admin Delete" ON storage.objects FOR DELETE USING (bucket_id = 'images' AND auth.role() = 'authenticated');
+
+-- ============================================
+-- SEED DATA — Run this AFTER creating the tables above.
+-- Paste into the Supabase SQL Editor to populate the
+-- "Latest Updates & Impact" section on the homepage.
+-- ============================================
+INSERT INTO public.site_updates (title, summary, content_type, badge_text) VALUES
+(
+  'Official 2026 Launch: The Gabriel Foundation Opens Its Doors',
+  'We are proud to announce the official launch of The Gabriel Foundation, a newly established 501(c)(3) non-profit organization dedicated to empowering women and girls through 1-on-1 sisterhood mentorship, confidential trauma counseling, and comprehensive life reset housing assistance. Women''s intake is now open.',
+  'news',
+  'Launch Announcement'
+),
+(
+  'Confidential Counseling & Therapy Program Now Accepting Referrals',
+  'Our trauma-informed counseling program is now accepting confidential intake requests. Licensed therapists specializing in domestic violence trauma are available for 1-on-1 sessions and weekly support groups. Contact us via our secure intake form to request support.',
+  'impact',
+  'Program Update'
+),
+(
+  'Volunteer Mentor Drive — Join Our Founding Sisterhood Circle',
+  'The Gabriel Foundation is actively recruiting trained female volunteer mentors to join our inaugural Sisterhood Mentorship Circle. Background-screened mentors are paired with women escaping abuse to provide peer support, goal setting, and emotional resilience coaching. Apply to volunteer today.',
+  'news',
+  'Volunteer Opportunity'
+);

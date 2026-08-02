@@ -209,7 +209,7 @@ export default function GlobalSearchModal({ isOpen, onClose }: GlobalSearchModal
               <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>No results found for &ldquo;{query}&rdquo;</p>
               <p style={{ fontSize: '0.9rem', marginTop: '0.4rem' }}>
                 Need immediate emergency help? Call our 24/7 Crisis Line at{' '}
-                <a href={`tel:${FOUNDATION_META.crisisLine247}`} style={{ color: 'var(--irc-orange)', fontWeight: 800 }}>
+                <a href="tel:18007997233" style={{ color: 'var(--irc-orange)', fontWeight: 800 }}>
                   {FOUNDATION_META.crisisLine247}
                 </a>
               </p>
